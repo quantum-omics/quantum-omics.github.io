@@ -1,2 +1,2 @@
-# quantum-omits.github.io
+# quantum-omics.github.io
 Quantum Omics Foundation Webpage
