@@ -1,0 +1,248 @@
+/* Vertical Workflow Visualization Styles - Central Alternating Timeline */
+
+/* CRITICAL: Override parent section fixed heights to allow workflow to grow */
+.home-about-left,
+.about-video-right {
+    height: auto !important;
+    min-height: 500px;
+    /* Ensure at least some height */
+    padding: 40px 0;
+    /* Add padding for breathing room */
+}
+
+/* Container */
+.workflow-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 900px;
+    height: auto;
+}
+
+/* Central Line */
+.workflow-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: linear-gradient(to bottom, #667eea 0%, #764ba2 100%);
+    transform: translateX(-50%);
+    z-index: 0;
+    border-radius: 2px;
+}
+
+/* Grid Step Layout */
+.workflow-step {
+    display: grid;
+    /* Col 1 | Col 2 (Node) | Col 3 */
+    /* Use clamp for node column to keep it stable but responsive */
+    grid-template-columns: 1fr clamp(70px, 12vw, 100px) 1fr;
+    align-items: center;
+    /* Vertically center align text box with node */
+    margin-bottom: 2.5vh;
+    /* Tighter vertical spacing */
+    width: 100%;
+    opacity: 0;
+    animation: fadeInStep 0.6s ease-out forwards;
+    position: relative;
+    z-index: 1;
+}
+
+.workflow-step:last-child {
+    margin-bottom: 0;
+}
+
+/* Node Styling */
+.workflow-node {
+    grid-column: 2;
+    grid-row: 1;
+    /* Force to same row as content */
+    justify-self: center;
+
+    width: clamp(50px, 9vw, 80px);
+    /* Slightly smaller nodes */
+    height: clamp(50px, 9vw, 80px);
+
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(18px, 3.5vw, 28px);
+    border: 4px solid #667eea;
+    z-index: 2;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    /* For z-index context */
+}
+
+.workflow-node:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    border-color: #764ba2;
+    background: #f8f9fa;
+}
+
+/* Content Box Styling - Compact & Wide */
+.workflow-content {
+    grid-row: 1;
+    /* Force to same row as node */
+    background: white;
+    padding: clamp(15px, 2vw, 20px);
+    /* Reduced padding */
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid #667eea;
+
+    /* Widen to reduce height ("Manage width accordingly") */
+    width: 95%;
+    max-width: 400px;
+    /* Allow it to be wider */
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    /* For connector line */
+}
+
+.workflow-content h5 {
+    font-size: clamp(15px, 2.5vw, 18px);
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.workflow-content p {
+    font-size: clamp(13px, 2vw, 14px);
+    color: #666;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+.workflow-step:hover .workflow-content {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Alternating Logic & Connectors */
+
+.workflow-step:nth-child(odd) .workflow-content {
+    grid-column: 3;
+    justify-self: start;
+    text-align: left;
+    margin-left: 20px;
+    /* Increased margin for connector space */
+}
+
+/* Connector for Odd (Right side) */
+.workflow-step:nth-child(odd) .workflow-content::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -80px;
+    /* Extend further left */
+    width: 100px;
+    /* Longer enough to reach node */
+    height: 3px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    /* Gradient matching theme */
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.workflow-step:nth-child(even) .workflow-content {
+    grid-column: 1;
+    justify-self: end;
+    text-align: left;
+    /* Keep text left-aligned inside box */
+    margin-right: 20px;
+    /* Increased margin for connector space */
+}
+
+/* Connector for Even (Left side) */
+.workflow-step:nth-child(even) .workflow-content::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -80px;
+    /* Extend further right */
+    width: 100px;
+    /* Longer enough to reach node */
+    height: 3px;
+    background: linear-gradient(to left, #667eea, #764ba2);
+    /* Gradient matching theme */
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+/* Animations */
+@keyframes fadeInStep {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .workflow-step {
+        grid-template-columns: 60px 1fr;
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+
+    .workflow-node {
+        grid-column: 1;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        border-width: 3px;
+        justify-self: center;
+    }
+
+    .workflow-step .workflow-content {
+        grid-column: 2 !important;
+        justify-self: start !important;
+        width: 100%;
+        max-width: none;
+        margin: 0 !important;
+    }
+
+    .workflow-line {
+        left: 30px;
+        width: 3px;
+    }
+}
+
+/* Fix for 'Get Involved' Text Margin (User Request) */
+.home-about-right {
+    padding-left: 50px !important;
+    /* Ensure separation from workflow */
+    padding-right: 30px !important;
+    /* Ensure separation from edge */
+}
+
+@media (max-width: 991px) {
+
+    /* Adjust for tablet/mobile where columns stack */
+    .home-about-right {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        padding-top: 40px;
+        /* Space between workflow and text when stacked */
+    }
+}
