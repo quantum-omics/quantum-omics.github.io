@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/workflow-style.css">
     <link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/brand-lockup.css">
 
     <!-- MathJax for inline LaTeX rendering -->
     <script>
@@ -45,16 +44,21 @@
         <div class="container main-menu">
             <div class="row align-items-center justify-content-between d-flex">
                 <div id="logo">
-            <a href="index.html" class="brand-lockup" aria-label="Quantum Omics Foundation — home"><img src="img/Qomics.png" alt="" width="60" height="50" /><span class="brand-wordmark">Quantum Omics Foundation</span></a>
+                    <a href="index.html"><img src="img/Qomics.png" alt="Quantum Omics Foundation Logo"
+                            title="Quantum Omics Foundation" width="60" height="50" /></a>
                 </div>
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
                         <li class="menu-active"><a href="index.html">Home</a></li>
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#work">Our Work</a></li> <li><a href="#qvo">QVO</a></li>
-                            <li><a href="#atlas">Cell Atlas</a></li> <li><a href="#disease">Disease</a></li>
+                        <li><a href="#work">Our Work</a></li> <li><a href="#cell-atlas">Cell Atlas</a></li> <li><a href="#disease">Disease</a></li>
+
                         <li><a href="#get-involved">Get Involved</a></li>
                         <li><a href="#resources">Resources</a></li>
+                        <li><a href="news.html" target="_blank">News</a></li>
+                        <li><a href="team.html" target="_blank">Team</a></li>
+                        <li><a href="contact.html" target="_blank">Contact</a></li>
+                        <li><a href="supportus.html" target="_blank">Support Us</a></li>
                     </ul>
                 </nav>
             </div>
@@ -164,7 +168,9 @@
                     <p>
                         We apply quantum computing methods to model cellular dynamics from multi-omics data,
                         building open, reproducible frameworks that the research community can study, extend,
-                        and build upon. Our work spans cell modelling, describing disease as a change to those models, and computational drug screening — all developed openly and released under permissive licences.
+                        and build upon. Our work spans quantum circuit design for biological systems, cell-state
+                        modelling, disease representation, and in-silico drug discovery — all developed openly
+                        and released under permissive licenses.
                     </p>
 
                     <h4 class="pt-20 pb-20">Key Research Programs</h4>
@@ -174,7 +180,9 @@
                         <li><strong>Quantum Disease Representation &amp; Classification:</strong> structured,
                             mechanistic descriptions of disease signatures enabling systematic comparison
                             across oncology, metabolic, immune, and neurodegenerative conditions.</li>
-                        <li><strong>Quantum-Guided Drug Discovery:</strong> open research pipelines for screening candidate compounds and assessing their likely safety, evaluated against cell models.</li>
+                        <li><strong>Quantum-Guided Drug Discovery:</strong> open research pipelines for
+                            virtual compound screening, lead optimisation, and ADMET evaluation using
+                            quantum cell models.</li>
                         <li><strong>Whole-Cell Quantum Modelling:</strong> scaling cell-level quantum models
                             toward tissue- and organ-scale representations of human physiology.</li>
                     </ul>
@@ -205,13 +213,74 @@
             </div>
 
             <!-- Key Programs -->
-            <div class="row">
-            <div class="col-lg-4 col-md-6 d-flex mb-4"><div class="single-product h-100 d-flex flex-column w-100"><div class="thumb"><img src="img/qvo.png" alt="Quantum Virtual Omics" width="150" height="150"></div><div class="details d-flex flex-column flex-grow-1"><h6 class="text-uppercase text-secondary mb-2">Foundation</h6><h4>Quantum Virtual Omics</h4><p class="flex-grow-1">The quantum&ndash;classical core: a digital twin of a living cell, built so the basic rules of biology hold by construction rather than being fitted from data. Wrapped in a layer of specialist AI agents, it becomes an end-to-end stack that the atlas and disease work both build on.</p><a href="#qvo" class="text-uppercase primary-btn mt-auto">Learn More</a></div></div></div>
-            <div class="col-lg-4 col-md-6 d-flex mb-4"><div class="single-product h-100 d-flex flex-column w-100"><div class="thumb"><img src="img/qce.png" alt="The Cell Atlas" width="150" height="150"></div><div class="details d-flex flex-column flex-grow-1"><h6 class="text-uppercase text-secondary mb-2">Atlas Research</h6><h4>The Cell Atlas</h4><p class="flex-grow-1">Extending one generic cell model across the many kinds of cell in the human body, by describing each as the shared foundation plus a few added specialities — so cell types can be compared in the same terms.</p><a href="#atlas" class="text-uppercase primary-btn mt-auto">Learn More</a></div></div></div>
-            <div class="col-lg-4 col-md-6 d-flex mb-4"><div class="single-product h-100 d-flex flex-column w-100"><div class="thumb"><img src="img/simulation.png" alt="Disease and Drug Discovery" width="150" height="150"></div><div class="details d-flex flex-column flex-grow-1"><h6 class="text-uppercase text-secondary mb-2">Research</h6><h4>Disease and Drug Discovery</h4><p class="flex-grow-1">Studying disease as a specific change to how a healthy cell behaves, and researching how to evaluate candidate compounds against a whole-cell model rather than a single target.</p><a href="#disease" class="text-uppercase primary-btn mt-auto">Learn More</a></div></div></div>
-          </div>
+            <div class="row align-items-stretch">
+
+                <!-- Quantum Cell Modelling (Foundation Research Program) -->
+                <div class="col-lg-4 col-md-6 d-flex mb-4">
+                    <div class="single-product h-100 d-flex flex-column w-100">
+                        <div class="thumb">
+                            <img src="img/qvo.png" alt="Quantum Cell Modelling Icon" width="150" height="150">
+                        </div>
+                        <div class="details d-flex flex-column flex-grow-1">
+                            <h6 class="text-uppercase text-secondary mb-2">Foundation</h6>
+                            <h4>Quantum Cell Modelling</h4>
+                            <p>
+                                        Our foundational research program builds a structure-preserving model of the cell
+                                        from multi-omics data &mdash; one where conservation and turnover hold by
+                                        construction rather than being fitted in. It is the shared substrate the atlas
+                                        and disease programs both build on, released as open simulation tools and
+                                        reproducible pipelines.
+                                    </p>
+                            <a href="#resources" class="primary-btn text-uppercase mt-auto align-self-start">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quantum Health Informatics (Clinical) -->
+                <div class="col-lg-4 col-md-6 d-flex mb-4">
+                    <div class="single-product h-100 d-flex flex-column w-100">
+                        <div class="thumb">
+                            <img src="img/qce.png" alt="Quantum Health Informatics Icon" width="150" height="150">
+                        </div>
+                        <div class="details d-flex flex-column flex-grow-1">
+                            <h6 class="text-uppercase text-secondary mb-2">Clinical Research</h6>
+                            <h4>Quantum Health Informatics</h4>
+                            <p>
+                                Research into quantum approaches for representing and analysing patient health
+                                data through the lens of multi-omics. We study how quantum-informed models of
+                                cellular biology can complement clinical data to provide richer, more structured
+                                frameworks for understanding disease across diverse conditions.
+                            </p>
+                            <a href="#" target="_blank" class="primary-btn text-uppercase mt-auto align-self-start">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quantum Drug Discovery (Therapeutics) -->
+                <div class="col-lg-4 col-md-6 d-flex mb-4">
+                    <div class="single-product h-100 d-flex flex-column w-100">
+                        <div class="thumb">
+                            <img src="img/simulation.png" alt="Quantum Drug Discovery Icon" width="150" height="150">
+                        </div>
+                        <div class="details d-flex flex-column flex-grow-1">
+                            <h6 class="text-uppercase text-secondary mb-2">Therapeutics Research</h6>
+                            <h4>Quantum Drug Discovery</h4>
+                            <p>
+                                We explore how quantum computing methods can accelerate the early stages of
+                                drug discovery &mdash; from virtual compound screening and target identification
+                                to toxicity prediction and ADMET profiling. Our open research aims to make
+                                quantum-assisted drug discovery accessible to the broader scientific community.
+                            </p>
+                            <a href="#" target="_blank" class="primary-btn text-uppercase mt-auto align-self-start">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
-  </section>
+    </section>
 
 
     <!-------------------------------------------research ------------------------------------------->
@@ -223,75 +292,17 @@
 
 
     <!-- Get Involved / Ways to Help Section -->
-    
-    <section class="feature-area section-gap" id="qvo">
+    <section class="home-about-area section-gap section-bg-gradient-subtle" id="cell-atlas">
     <div class="container">
-      <div class="row d-flex justify-content-center"><div class="col-md-12 pb-40 header-text text-center"><h1 class="pb-10 text-black">Quantum Virtual Omics (QVO)</h1><h5 class="text-black">A digital twin of a living cell, wrapped in a layer of AI agents — the core of everything we build.</h5></div></div>
-      <div class="row justify-content-center pb-40"><div class="col-lg-9 text-center">
-        <p>A cell is not a list of measurements. It is a system that moves: genes switch on,
-        proteins are made and cleared, energy is spent and replenished. <strong>Quantum Virtual
-        Omics (QVO)</strong> is our effort to capture that motion in software — a digital twin
-        of a cell that behaves the way a real one does, built from measurements of what is
-        actually inside it.</p>
-        <p>What makes it different from a statistical fit is that the basic rules of biology are
-        built into the model rather than learned by accident. Matter is not created or destroyed;
-        energy has to come from somewhere. Because those constraints hold by construction, the
-        twin stays physically sensible even when asked about conditions it has not seen.</p>
-        <p>A model on its own does not answer a research question. Around the QVO we are building a layer of
-        <strong>specialist AI agents</strong> &mdash; software that finds and prepares the data, fits and checks the
-        model, runs the what-if studies, and turns results into something a researcher can act on. The QVO supplies a
-        cell state you can interrogate; the agents do the work of getting data to it and reading its answers back out.
-        Together they make an end-to-end stack rather than a model you have to drive by hand.</p>
-        <p><small>The cell model is in active development with manuscripts in preparation; the agent layer is
-        specified and being built.</small></p>
-      </div></div>
-      <div class="row"><div class="col-lg-4 col-md-6 d-flex mb-4"><div class="single-product h-100 d-flex flex-column w-100"><div class="details d-flex flex-column flex-grow-1"><h6 class="text-uppercase text-secondary mb-2">Foundation</h6><h4>One model, many uses</h4><p class="flex-grow-1">The same cell model underpins everything else we do. Build it once, well, and both the atlas and the disease work inherit it — rather than a separate model for every question.</p></div></div></div><div class="col-lg-4 col-md-6 d-flex mb-4"><div class="single-product h-100 d-flex flex-column w-100"><div class="details d-flex flex-column flex-grow-1"><h6 class="text-uppercase text-secondary mb-2">Foundation</h6><h4>Built to be interrogated</h4><p class="flex-grow-1">The twin is not a black box. Its parts correspond to recognisable cell processes, so when the model says something changed, you can ask which process moved and by how much.</p></div></div></div><div class="col-lg-4 col-md-6 d-flex mb-4"><div class="single-product h-100 d-flex flex-column w-100"><div class="details d-flex flex-column flex-grow-1"><h6 class="text-uppercase text-secondary mb-2">Foundation</h6><h4>Open and reproducible</h4><p class="flex-grow-1">The model, the code, and the pipelines are released openly so other groups can check our results, disagree with them, and build their own work on top.</p><a href="https://github.com/quantum-omics/BioPhasor" class="text-uppercase primary-btn mt-auto">Learn More</a></div></div></div>      </div>
+      <div class="row d-flex justify-content-center"><div class="col-md-12 pb-40 header-text text-center"><h1 class="pb-10 text-black">The Quantum Cell-State Atlas</h1><h5 class="text-black">The human body contains more than 250 distinct cell types, yet every one of them runs the same universal core: transcription, translation, energy metabolism, and turnover. Our atlas research makes that shared-core structure explicit and learnable.</h5></div></div><div class="row align-items-center pb-40"><div class="col-lg-6"><h4 class="mb-3">One generic cell, specialised many ways</h4><p>We begin from a <strong>generic cell</strong> &mdash; the housekeeping backbone every human cell shares, fitted to a pan-cell-type reference. A specialised cell type is then that same backbone plus a small, interpretable extension: a sparse combination of modules drawn from a shared library.</p><p>Because the specialisation is additive and sparse, two cell types can be compared directly by asking which modules each one switches on and how strongly. Differentiation becomes a path through that space rather than a relabelling exercise, which makes intermediate and transitional states describable in the same terms as the endpoints.</p></div><div class="col-lg-6"><h4 class="mb-3">The module library</h4><p>Each module is an interpretable, reusable piece of cellular behaviour. A cardiomyocyte draws heavily on the contractile and calcium-handling modules; a hepatocyte on metabolic and secretory; a neuron on neuroelectric; an epithelial cell on barrier.</p><ul class="list-unstyled"><li>&#8250; <strong>Calcium handling</strong> &mdash; excitation and signalling dynamics</li><li>&#8250; <strong>Contractile</strong> &mdash; force generation and mechanical cycling</li><li>&#8250; <strong>Secretory</strong> &mdash; synthesis and regulated export</li><li>&#8250; <strong>Metabolic</strong> &mdash; energy handling and biosynthesis</li><li>&#8250; <strong>Immune</strong> &mdash; recognition and response programs</li><li>&#8250; <strong>Barrier</strong> &mdash; junctional integrity and transport</li><li>&#8250; <strong>Neuroelectric</strong> &mdash; electrical excitability and conduction</li></ul></div></div><div class="row align-items-stretch"><div class="col-lg-4 col-md-6 d-flex mb-4"><div class="single-product h-100 d-flex flex-column w-100"><div class="details d-flex flex-column flex-grow-1"><h6 class="text-uppercase text-secondary mb-2">Atlas Research</h6><h4>Cell-type coverage</h4><p>Extending the atlas across germ-layer classes and the major tissue lineages, so that a shared library of modules accounts for the diversity of human cell types rather than a separate model per type.</p><a href="#resources" class="primary-btn text-uppercase mt-auto align-self-start">Learn More</a></div></div></div><div class="col-lg-4 col-md-6 d-flex mb-4"><div class="single-product h-100 d-flex flex-column w-100"><div class="details d-flex flex-column flex-grow-1"><h6 class="text-uppercase text-secondary mb-2">Atlas Research</h6><h4>Differentiation trajectories</h4><p>Treating cell-fate transitions as continuous paths in module space. A progenitor and its descendants differ by which modules are engaged, which makes intermediate states first-class objects rather than noise.</p><a href="#resources" class="primary-btn text-uppercase mt-auto align-self-start">Learn More</a></div></div></div><div class="col-lg-4 col-md-6 d-flex mb-4"><div class="single-product h-100 d-flex flex-column w-100"><div class="details d-flex flex-column flex-grow-1"><h6 class="text-uppercase text-secondary mb-2">Atlas Research</h6><h4>Open reference models</h4><p>Releasing the generic cell and the module library as open, reproducible artefacts, so other groups can fit their own cell types against a common backbone and compare results directly.</p><a href="#resources" class="primary-btn text-uppercase mt-auto align-self-start">Learn More</a></div></div></div></div>
     </div>
   </section>
 
-  <section class="feature-area section-gap section-bg-gradient-subtle" id="atlas">
-    <div class="container">
-      <div class="row d-flex justify-content-center"><div class="col-md-12 pb-40 header-text text-center"><h1 class="pb-10 text-black">The Cell Atlas</h1><h5 class="text-black">The human body has more than 250 kinds of cell. They have more in common than you might expect.</h5></div></div>
-      <div class="row justify-content-center pb-40"><div class="col-lg-9 text-center">
-        <p>A heart cell and a liver cell look nothing alike and do entirely different jobs. But
-        underneath, both run the same housekeeping: reading genes, making proteins, managing
-        energy, clearing waste. What makes one a heart cell is a small set of extra capabilities
-        layered on that shared foundation.</p>
-        <p>The atlas builds that idea directly on the QVO. We start from a generic cell and describe each
-        real cell type as the generic one plus a few added specialities — contraction, secretion,
-        electrical signalling, and so on. Because every cell type is described in the same
-        vocabulary, they can be compared honestly, and the in-between states a cell passes
-        through as it develops become describable too.</p>
-      </div></div>
-      <div class="row"><div class="col-lg-4 col-md-6 d-flex mb-4"><div class="single-product h-100 d-flex flex-column w-100"><div class="details d-flex flex-column flex-grow-1"><h6 class="text-uppercase text-secondary mb-2">Atlas</h6><h4>A shared vocabulary</h4><p class="flex-grow-1">Each speciality is a reusable building block. A heart cell leans on contraction and calcium handling; a liver cell on metabolism and secretion; a neuron on electrical signalling. Same library, different combinations.</p></div></div></div><div class="col-lg-4 col-md-6 d-flex mb-4"><div class="single-product h-100 d-flex flex-column w-100"><div class="details d-flex flex-column flex-grow-1"><h6 class="text-uppercase text-secondary mb-2">Atlas</h6><h4>Development as a path</h4><p class="flex-grow-1">If cell types differ by which blocks are switched on, then a cell maturing from one type into another is following a path through that space — not jumping between labels.</p></div></div></div><div class="col-lg-4 col-md-6 d-flex mb-4"><div class="single-product h-100 d-flex flex-column w-100"><div class="details d-flex flex-column flex-grow-1"><h6 class="text-uppercase text-secondary mb-2">Atlas</h6><h4>Open reference models</h4><p class="flex-grow-1">We release the generic cell and the block library openly, so other groups can fit their own cell types to the same foundation and compare results with ours directly.</p></div></div></div>      </div>
-    </div>
-  </section>
-
-
-  
   <section class="feature-area section-gap" id="disease">
     <div class="container">
-      <div class="row d-flex justify-content-center"><div class="col-md-12 pb-40 header-text text-center"><h1 class="pb-10 text-black">Disease and Drug Discovery Research</h1><h5 class="text-black">If a healthy cell is a working model, disease is that model running differently.</h5></div></div>
-      <div class="row justify-content-center pb-40"><div class="col-lg-9 text-center">
-        <p>Most disease classification works by pattern matching: this profile resembles that label. Because the QVO is a
-        model of how a healthy cell behaves, we can ask a sharper question. We are exploring a different question — what actually changed? Given a model of
-        how a healthy cell behaves, a disease shows up as a specific alteration to it. Something
-        became too strong or too weak; a connection was lost; waste is cleared too slowly.</p>
-        <p>The value of describing it that way is comparison. Cancer, metabolic disease, immune
-        conditions, and neurodegeneration all get described in the same terms, so they can be
-        studied side by side instead of in separate silos.</p>
-      </div></div>
-      <div class="row"><div class="col-lg-4 col-md-6 d-flex mb-4"><div class="single-product h-100 d-flex flex-column w-100"><div class="details d-flex flex-column flex-grow-1"><h6 class="text-uppercase text-secondary mb-2">Disease Research</h6><h4>Describing what changed</h4><p class="flex-grow-1">Rather than assigning a label, we ask which part of the cell&rsquo;s machinery moved, in which direction, and by how much — a description that points at a mechanism.</p></div></div></div><div class="col-lg-4 col-md-6 d-flex mb-4"><div class="single-product h-100 d-flex flex-column w-100"><div class="details d-flex flex-column flex-grow-1"><h6 class="text-uppercase text-secondary mb-2">Disease Research</h6><h4>Comparing across conditions</h4><p class="flex-grow-1">One shared vocabulary covers cancer, metabolic, immune, and neurological conditions, which is what makes systematic comparison between them possible in the first place.</p></div></div></div><div class="col-lg-4 col-md-6 d-flex mb-4"><div class="single-product h-100 d-flex flex-column w-100"><div class="details d-flex flex-column flex-grow-1"><h6 class="text-uppercase text-secondary mb-2">Drug Discovery</h6><h4>Screening against a whole cell</h4><p class="flex-grow-1">Compounds are usually assessed against a single target. We are researching how to evaluate them against a model of the entire cell, where knock-on effects are visible.</p></div></div></div>      </div>
-      <div class="row justify-content-center pt-20"><div class="col-lg-9">
-        <p class="text-center"><small><strong>Research scope.</strong> This is open scientific
-        research. The Foundation does not provide medical care, diagnosis, or treatment, and
-        nothing here is medical advice. Our work uses public, synthetic, and consented research
-        data. Any clinical use would need separate validation, ethical review, and regulatory
-        approval — work we do not undertake.</small></p>
-      </div></div>
+      <div class="row d-flex justify-content-center"><div class="col-md-12 pb-40 header-text text-center"><h1 class="pb-10 text-black">Disease, Treatment &amp; Drug Discovery</h1><h5 class="text-black">If a healthy cell is a working model, disease is a structured deformation of that model rather than a label attached to it. That reframing is what connects our disease research to treatment and to compound screening.</h5></div></div><div class="row align-items-center pb-40"><div class="col-lg-6"><h4 class="mb-3">Disease as a learnable perturbation</h4><p>We represent a patient&rsquo;s state as three things: a reference model learned from matched healthy omics, the deformation a disease produces in it, and a set of well-defined observable quantities.</p><p>Classification then becomes mechanistic. Rather than asking which label best fits a profile, we ask which part of the cell&rsquo;s machinery moved, in which direction, and by how much &mdash; refitting only the affected part and leaving the rest of the reference intact.</p></div><div class="col-lg-6"><h4 class="mb-3">Six ways a cell can be deformed</h4><ul class="list-unstyled"><li>&#8250; <strong>Coupling gain</strong> &mdash; oncology; interactions strengthen or weaken (oncogene gain, suppressor loss)</li><li>&#8250; <strong>Network topology</strong> &mdash; structural and epigenetic; connections added or removed (copy-number, methylation)</li><li>&#8250; <strong>Turnover</strong> &mdash; proteostasis and senescence; molecules cleared faster or slower</li><li>&#8250; <strong>Cross-compartment coupling</strong> &mdash; neuro and metabolic; sub-systems fall out of step</li><li>&#8250; <strong>Energy landscape</strong> &mdash; metabolic set-point shifts to a new resting state</li><li>&#8250; <strong>Exogenous drive</strong> &mdash; therapy, hormones, nutrition acting from outside</li></ul><p class="mt-3">A single taxonomy covers oncology, metabolic, immune, and neurodegenerative conditions, which is what makes systematic comparison across them possible.</p></div></div><div class="row align-items-stretch"><div class="col-lg-4 col-md-6 d-flex mb-4"><div class="single-product h-100 d-flex flex-column w-100"><div class="details d-flex flex-column flex-grow-1"><h6 class="text-uppercase text-secondary mb-2">Disease Research</h6><h4>Disease representation &amp; classification</h4><p>Structured, mechanistic descriptions of disease signatures. Because every condition is expressed in the same vocabulary of deformations, signatures can be compared across disease areas rather than only within one.</p><a href="#resources" class="primary-btn text-uppercase mt-auto align-self-start">Learn More</a></div></div></div><div class="col-lg-4 col-md-6 d-flex mb-4"><div class="single-product h-100 d-flex flex-column w-100"><div class="details d-flex flex-column flex-grow-1"><h6 class="text-uppercase text-secondary mb-2">Therapeutics Research</h6><h4>Treatment as the inverse problem</h4><p>If disease is a deformation, treatment is the intervention that counteracts it. This turns therapy selection into a search over interventions that move the model back toward its healthy reference &mdash; a research question we are actively developing.</p><a href="#resources" class="primary-btn text-uppercase mt-auto align-self-start">Learn More</a></div></div></div><div class="col-lg-4 col-md-6 d-flex mb-4"><div class="single-product h-100 d-flex flex-column w-100"><div class="details d-flex flex-column flex-grow-1"><h6 class="text-uppercase text-secondary mb-2">Therapeutics Research</h6><h4>Quantum-guided drug discovery</h4><p>Open research pipelines for virtual compound screening, lead optimisation, and ADMET evaluation, evaluated against cell models rather than against a target in isolation.</p><a href="#resources" class="primary-btn text-uppercase mt-auto align-self-start">Learn More</a></div></div></div></div><div class="row d-flex justify-content-center pt-30"><div class="col-md-10"><p class="text-center"><em>Research scope.</em> This is open scientific research, not a clinical or diagnostic service. Our disease work is developed on public, synthetic, and consented research data, and any clinical application would require separate validation, ethical review, and regulatory approval.</p></div></div>
     </div>
   </section>
-
 
   <section class="home-about-area section-gap section-bg-gradient-subtle" id="get-involved">
         <div class="container">
@@ -374,7 +385,7 @@
                                 target="_blank" style="margin: 0 10px;"><i class="fa fa-linkedin"></i></a>
                             <a href="#" class="social-twitter" target="_blank" style="margin: 0 10px;"><i
                                     class="fa fa-twitter"></i></a>
-                            <a href="https://github.com/quantum-omics" class="social-github" target="_blank"
+                            <a href="https://github.com/quantum-omics-foundation" class="social-github" target="_blank"
                                 style="margin: 0 10px;"><i class="fa fa-github"></i></a>
                             <a href="https://www.youtube.com/@quantum-omics-foundation" class="social-youtube"
                                 target="_blank" style="margin: 0 10px;"><i class="fa fa-youtube"></i></a>
@@ -408,45 +419,53 @@
                     <!-- Publications & Whitepapers -->
                     <h4 class="pt-20">Publications &amp; Research Papers</h4>
                     <ul>
-                      <li>
-                        <strong>BioPhasor: Decoding Cellular State Tensors from Multi-Omics Phasor Dynamics for Quantum Ready Systems Biology</strong><br>
-                        Sigdel, D., &amp; Panday, N. (2026). <em>bioRxiv</em>.
-                        <a href="https://doi.org/10.64898/2026.07.17.739210" target="_blank" rel="noopener">doi:10.64898/2026.07.17.739210</a><br>
-                        Introduces the phasor representation of multi-omics measurements and the
-                        cell-state tensor the model is built on.
-                      </li>
-                      <li>
-                        <strong>Learning the Cellular Dynamics as a Port-Hamiltonian System: A Composite Multi-Clock GNN-Surrogate for Multi-Omics Circadian Cell Biology</strong><br>
-                        Sigdel, D., &amp; Panday, N. (2026). <em>bioRxiv</em>.
-                        <a href="https://doi.org/10.64898/2026.07.11.737972" target="_blank" rel="noopener">doi:10.64898/2026.07.11.737972</a><br>
-                        Casts cellular dynamics as a physical system with coupled biological clocks,
-                        the basis for how the twin evolves over time.
-                      </li>
+                        <li>
+                            <strong>1. Quantum Digital Twin of the Biological Cell on a Quantum Computer</strong>
+                            &ndash; Introduces a quantum framework for cellular modelling from multi-omics data,
+                            covering theory, atlas construction, disease classification, and quantum-guided
+                            drug discovery. A foundational technical reference for the research community.
+                        </li>
+                        <li>
+                            <strong>2. The ChatGPT Moment in Cell Biology</strong> &ndash; Highlights the paradigm shift
+                            from static molecular snapshots to event-driven, time-oriented computational modelling of
+                            cellular processes, emphasising graph-based approaches and hierarchical dynamics.
+                            <a href="The ChatGPT Moment in Cell Biology | LinkedIn.pdf" target="_blank">Download</a>
+                        </li>
+                        <li>
+                            <strong>3. Hardware Roadmap for Quantum Whole-Cell Models</strong> &ndash; A four-tier
+                            scaling path from today's near-term quantum prototypes through fault-tolerant tissue
+                            models to full-organism digital twins, together with the observables that track
+                            cellular dynamics across scales.
+                        </li>
                     </ul>
-                    <p><small>Both preprints are available on bioRxiv and have not yet completed
-                    peer review. Further manuscripts are in preparation.</small></p>
+
+                    <!-- Tools & Open-Source Projects -->
                     <h4 class="pt-20">Open-Source Software &amp; Tools</h4>
                     <p>
-                      <strong>BioPhasor</strong> — our library for phase-based analysis of
-                      biological measurements, and the computational foundation the cell model is
-                      built on. Apache-2.0 licensed, free to study, extend, and use.
-                      <a href="https://github.com/quantum-omics/BioPhasor" target="_blank" rel="noopener">BioPhasor on GitHub</a>
-                      &middot;
-                      <a href="https://github.com/quantum-omics" target="_blank" rel="noopener">All our repositories</a>
+                        Our GitHub hosts open-source educational tools, computational notebooks, and
+                        research-grade simulation examples for the quantum-computational biology community.
+                        All code is released under permissive licenses — freely available to study,
+                        extend, and use in your research.
+                        <a href="https://github.com/quantum-omics-foundation" target="_blank">View on GitHub</a>
                     </p>
+
+                    <!-- Media & Press -->
                     <h4 class="pt-20">Media &amp; Press</h4>
                     <p>
-                      For press enquiries, interview requests, or logos and fact sheets, please
-                      <a href="contact.html">get in touch</a>.
+                        Browse interviews, project spotlights, conference presentations, and blog posts in our media
+                        center. A media kit with logos, fact sheets, and journalist contact information is available
+                        upon request.
                     </p>
 
                     <!-- Educational Content -->
-                    <h4 class="pt-20">Educational Resources</h4>
+                    <h4 class="pt-20">Educational Resources &amp; Training Materials</h4>
                     <p>
-                      We are building an open collection of teaching material on quantum methods
-                      in biology — notebooks, worked examples, and short explainers. The first
-                      materials will be published alongside our software repositories as they are
-                      ready. If you would like to be told when they appear, join the newsletter below.
+                        Access our comprehensive collection of webinars, tutorials, Jupyter notebooks, and video
+                        lectures covering quantum computing in biology, multi-omics data analysis, building
+                        cellular models from single-cell data, dynamical simulation of cellular states, and
+                        computational drug discovery. We offer structured courses, hands-on workshops, and
+                        self-paced learning paths for students and researchers. Visit our educational portal for
+                        course materials, code examples, and FAQs.
                     </p>
                 </div>
 
@@ -473,8 +492,7 @@
                         <ul class="footer-nav">
                             <li><a href="index.html">Home</a></li>
                             <li><a href="#about">About Us</a></li>
-                            <li><a href="#work">Our Work</a></li> <li><a href="#qvo">QVO</a></li>
-                            <li><a href="#atlas">Cell Atlas</a></li> <li><a href="#disease">Disease</a></li>
+                            <li><a href="#work">Our Work</a></li> <li><a href="#cell-atlas">Cell Atlas</a></li> <li><a href="#disease">Disease</a></li>
                             
                             <li><a href="#get-involved">Get Involved</a></li>
                             <li><a href="#resources">Resources</a></li>
@@ -540,7 +558,7 @@
                             <a href="https://www.linkedin.com/company/quantum-omics-foundation/" class="social-linkedin"
                                 target="_blank"><i class="fa fa-linkedin"></i></a>
                             <a href="#" class="social-twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-                            <a href="https://github.com/quantum-omics" class="social-github"
+                            <a href="https://github.com/quantum-omics-foundation" class="social-github"
                                 target="_blank"><i class="fa fa-github"></i></a>
                             <a href="https://www.youtube.com/@quantum-omics-foundation" class="social-youtube"
                                 target="_blank"><i class="fa fa-youtube"></i></a>

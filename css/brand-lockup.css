@@ -1,0 +1,108 @@
+/* brand-lockup.css — logo + wordmark in the header.
+   Loaded after main.css so these rules win without editing vendor CSS. */
+
+#logo .brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+#logo .brand-lockup img {
+  flex: none;
+}
+
+#logo .brand-wordmark {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.15;
+  color: #ffffff;
+  /* The header is transparent over the hero gradient and periwinkle once
+     scrolled. A soft shadow keeps the wordmark legible across both. */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+  white-space: nowrap;
+}
+
+#logo .brand-lockup:hover .brand-wordmark,
+#logo .brand-lockup:focus .brand-wordmark {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Tablet: shorten the lockup before it collides with the menu. */
+@media (max-width: 991px) {
+  #logo .brand-wordmark { font-size: 15px; letter-spacing: 0.06em; }
+  #logo .brand-lockup { gap: 9px; }
+}
+
+/* Phone: two lines rather than shrinking the type into illegibility. */
+@media (max-width: 767px) {
+  #logo .brand-wordmark {
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    white-space: normal;
+    max-width: 9.5em;
+  }
+}
+
+/* Very narrow: mark only, so the burger menu always has room. */
+@media (max-width: 413px) {
+  #logo .brand-wordmark { display: none; }
+}
+
+
+/* ── Body text colour ─────────────────────────────────────────────────────────
+   main.css sets `body { color: #777777 }`, a light grey measuring 4.48:1 on
+   white and worse on the tinted sections (4.27 on #f9f9ff, 4.11 on #f5f5f5) —
+   below the 4.5 WCAG AA threshold for body text everywhere it is used.
+   #1a1a1a measures 17.4:1 on white. Scoped to the light sections so the
+   footer, hero, and any deliberately light-on-dark text keep their own colours. */
+
+body { color: #1a1a1a; }
+
+.feature-area p,
+.feature-area li,
+.home-about-area p,
+.home-about-area li,
+.about-video-area p,
+.about-video-area li,
+.section-gap p,
+.section-gap li,
+.single-product p,
+.single-product .details p {
+  color: #1a1a1a;
+}
+
+/* Muted helpers stay muted, but at a readable level rather than a pale one. */
+.text-muted,
+.text-secondary { color: #4a5057 !important; }   /* 8.1:1 on white */
+
+/* Small print keeps a lighter weight without dropping below AA. */
+.feature-area small,
+.section-gap small { color: #3d3d3d; }           /* 10.9:1 on white */
+
+/* Headings on light sections read as true black. */
+.feature-area h1, .feature-area h2, .feature-area h3, .feature-area h4,
+.home-about-area h1, .home-about-area h2, .home-about-area h3, .home-about-area h4 {
+  color: #111111;
+}
+
+/* Do NOT touch light-on-dark regions. */
+.footer-area p, .footer-area li, .footer-area span,
+.single-footer-widget p, .single-footer-widget li,
+.banner-area p, .banner-area h1, .banner-area h2 {
+  color: inherit;
+}
+
+/* The purple gradient on hover applies to the BUTTON inside a card
+   (.single-product:hover .details .primary-btn), NOT to the card, which keeps
+   its white background. Card text must therefore stay dark on hover — an
+   earlier rule here forced it to #fff and made the text vanish. */
+.single-product:hover p,
+.single-product:hover .details p,
+.single-product:hover h4,
+.single-product:hover h6 { color: #1a1a1a; }
+
+/* Only the button flips to white, and main.css already sets that !important. */
