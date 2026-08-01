@@ -106,3 +106,138 @@ body { color: #1a1a1a; }
 .single-product:hover h6 { color: #1a1a1a; }
 
 /* Only the button flips to white, and main.css already sets that !important. */
+
+
+/* ── Header height and hero clearance ────────────────────────────────────────
+   The header is `position: fixed` but `.banner-area` had no top padding, and
+   `.fullscreen` is not defined in any stylesheet — so nothing held the hero
+   below the header except a few <br> tags in the markup. Fixed properly here.
+
+   Header box: .main-menu padding-top + logo height + #header padding-bottom.
+   Was 20 + 40 + 20 = 80px. Now 12 + 34 + 12 = 58px. */
+.main-menu { padding-top: 12px !important; }
+#header { padding-bottom: 12px !important; }
+/* The theme caps logo height but the markup sets an explicit width, so the
+   image renders 60x34 against an intrinsic 1920x1600 (1.2) — stretched 1.47x
+   wide. Letting width follow height restores the true aspect. */
+#header #logo img { max-height: 34px !important; height: 34px !important; width: auto !important; }
+
+/* Clearance = header height + breathing room. */
+.banner-area { padding-top: 118px; }
+@media (max-width: 991px) { .banner-area { padding-top: 104px; } }
+@media (max-width: 767px) { .banner-area { padding-top: 92px; } }
+
+/* Interior pages already set their own padding-top on the first section;
+   trim it to match the shorter header. */
+@media (min-width: 992px) {
+  section[style*="padding-top: 150px"] { padding-top: 118px !important; }
+}
+
+/* ── Hero title ──────────────────────────────────────────────────────────────
+   main.css sets .banner-content h1 to font-weight 300 — a light weight at 60px
+   reads as thin, not authoritative. */
+.banner-content h1 {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.28);
+}
+
+/* Hero title sizing moved out of the inline style so the breakpoints can win —
+   an inline font-size overrides every media query. */
+.banner-content h1.hero-title { font-size: 3.5rem; line-height: 1.14; }
+@media (max-width: 991px) { .banner-content h1.hero-title { font-size: 2.7rem; } }
+@media (max-width: 767px) { .banner-content h1.hero-title { font-size: 2.2rem; } }
+
+/* news.html is a superseded page (canonical -> resources.html) but still
+   reachable by direct link, and its first section carries no top padding —
+   content would sit under the fixed header. */
+#news-events { padding-top: 118px; }
+@media (max-width: 991px) { #news-events { padding-top: 104px; } }
+
+
+/* ── Research panels ─────────────────────────────────────────────────────────
+   Adapted from the panel pattern used on the Mindverse site: one large card per
+   programme, split two-up, with an accent bar, an eyebrow, a "what we are
+   building" box, and a labelled product list.
+
+   The palette is NOT copied. That site is dark; this one is light, and the house
+   periwinkle #8a90ff measures 2.79:1 on white — unreadable as body text. These
+   are darker siblings of the same hues, all >=4.5:1. */
+.research-card {
+  /* Per-programme tint. The hue is the Mindverse accent for that product; only
+     the lightness differs, because those values were built for a #1B264F navy
+     and measure 1.39:1 (cyan) to 3.14:1 (magenta) as text on white. The pure
+     colour is used for the decorative top bar, where contrast does not apply. */
+  background: #ffffff;
+  border: 1px solid #e6e8f5;
+  border-radius: 20px;
+  padding: 2.6rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2.25rem;
+  box-shadow: 0 8px 28px rgba(90, 95, 160, 0.07);
+}
+.research-card .rc-bar {
+  position: absolute; top: 0; left: 0; right: 0; height: 4px;
+}
+.research-card .rc-eyebrow {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; margin-bottom: 0.55rem;
+}
+.research-card h2 {
+  color: #222222; font-size: 1.62rem; line-height: 1.3; margin: 0 0 0.7rem;
+}
+.research-card .rc-tag {
+  display: inline-block; font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 1px; padding: 4px 12px; border-radius: 999px;
+  margin-bottom: 1rem;
+}
+.research-card .rc-lede { color: #4a4f66; line-height: 1.85; font-size: 1rem; }
+.research-card .rc-building {
+  background: #f7f8fd; border-radius: 0 10px 10px 0;
+  padding: 1.15rem 1.35rem; margin-top: 1.4rem;
+}
+.research-card .rc-building-label {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; margin-bottom: 0.4rem;
+}
+.research-card .rc-building p { margin: 0; color: #4a4f66; font-size: 0.95rem; line-height: 1.75; }
+.research-card .rc-products-label {
+  font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
+  color: #5c6276; font-weight: 600; margin-bottom: 0.9rem;
+}
+.research-card .rc-list { list-style: none; margin: 0; padding: 0; }
+.research-card .rc-list li {
+  padding: 0 0 1.05rem 1.15rem; position: relative; line-height: 1.7;
+}
+.research-card .rc-list li:last-child { padding-bottom: 0; }
+.research-card .rc-list li::before {
+  content: "\2192"; position: absolute; left: 0; top: 0; font-weight: 700;
+}
+.research-card .rc-name { display: block; font-weight: 600; margin-bottom: 0.15rem; }
+.research-card .rc-desc { color: #4a4f66; font-size: 0.94rem; }
+.research-card .rc-status {
+  display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; padding: 2px 9px; border-radius: 999px;
+  margin-left: 6px; vertical-align: middle;
+  background: #eef0f8; color: #5a6078;
+}
+@media (max-width: 991px) { .research-card { padding: 1.9rem; } }
+
+
+/* ── Research panel colour, per programme ────────────────────────────────────
+   bar  = the exact Mindverse accent (decorative only)
+   text = the same hue darkened until it clears AA on its own tint
+   panel/box = that hue at 6% / 11% over white */
+#qvo.research-card     { background: #f0feff; border-color: rgba(0, 242, 254, 0.35); }
+#qvo .rc-building      { background: #e3feff; }
+#atlas.research-card   { background: #f0fef7; border-color: rgba(0, 230, 118, 0.35); }
+#atlas .rc-building    { background: #e3fcf0; }
+#disease.research-card { background: #fff0ff; border-color: rgba(255, 0, 255, 0.30); }
+#disease .rc-building  { background: #ffe3ff; }
+
+/* Safety net: the theme sets max-height on several image slots while markup
+   often carries an explicit width. Where both apply the image squashes. This
+   preserves the intrinsic ratio inside whatever box it lands in. */
+#logo img, .footer-widget img { object-fit: contain; }

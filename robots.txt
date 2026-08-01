@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Superseded pages — content now lives on about / resources / get-involved
+Disallow: /team.html
+Disallow: /news.html
+Disallow: /supportus.html
+
+# Not part of the public site
+Disallow: /README.md
+Disallow: /scss/
+
+Sitemap: https://www.quantumomics.foundation/sitemap.xml
