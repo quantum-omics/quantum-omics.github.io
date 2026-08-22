@@ -37,6 +37,20 @@
   #logo .brand-lockup { gap: 9px; }
 }
 
+/* ── Seven-item menu on narrow desktops ─────────────────────────────────────
+   The menu gained a seventh item (Learning). Between 992px and 1199px the
+   Bootstrap container is 960px, and the wordmark plus seven items needs more
+   than that at the theme's default spacing — the row would wrap under the
+   logo. The burger takes over at 960px and the container jumps to 1140px at
+   1200px, so this band is the only one that is tight. Trimming the per-item
+   padding and gap is enough; nothing needs to shrink or be hidden. */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .nav-menu a { padding: 0 6px; }
+  .nav-menu > li { margin-left: 6px; }
+  #logo .brand-wordmark { font-size: 15px; letter-spacing: 0.06em; }
+  #logo .brand-lockup { gap: 9px; }
+}
+
 /* Phone: two lines rather than shrinking the type into illegibility. */
 @media (max-width: 767px) {
   #logo .brand-wordmark {
@@ -51,6 +65,16 @@
 @media (max-width: 413px) {
   #logo .brand-wordmark { display: none; }
 }
+
+
+/* ── Missing Bootstrap 4.1 flex utility ─────────────────────────────────────
+   The bundled Bootstrap is 4.0.0, which shipped .d-flex and .mt-auto but not
+   .flex-grow-1 (added in 4.1). The equal-height card pattern used on the about
+   and learning pages needs it: the inner .details column has to absorb the
+   spare height before .mt-auto can push the button to the bottom edge. Without
+   it the declaration is a no-op and buttons sit at ragged heights across a row.
+   Declared here rather than by upgrading the vendor file. */
+.flex-grow-1 { flex-grow: 1 !important; }
 
 
 /* ── Body text colour ─────────────────────────────────────────────────────────

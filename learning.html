@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Quantum Omics Foundation">
+    <meta name="keywords" content="Quantum Omics Foundation, learn quantum computing, quantum algorithms, quantum machine learning, quantum optimization, quantum simulation, Qiskit, PennyLane, open science, science education">
+    <meta charset="UTF-8">
+    <title>Learning — Quantum Omics Foundation</title>
+  <meta name="description" content="A six-track walkthrough of quantum computing for people arriving from the life sciences: the basics, algorithms, machine learning, optimisation, simulation, and where they meet omics data.">
+  <link rel="canonical" href="https://www.quantumomics.foundation/learning.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.quantumomics.foundation/learning.html">
+  <meta property="og:title" content="Learning — Quantum Omics Foundation">
+  <meta property="og:description" content="A six-track walkthrough of quantum computing for people arriving from the life sciences: the basics, algorithms, machine learning, optimisation, simulation, and where they meet omics data.">
+  <meta property="og:image" content="https://www.quantumomics.foundation/img/Qomics.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/hexagons.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/brand-lockup.css">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png">
+  <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+<header id="header" class="header-permanent">
+        <div class="container main-menu">
+            <div class="row align-items-center justify-content-between d-flex">
+                <div id="logo">
+            <a href="index.html" class="brand-lockup" aria-label="Quantum Omics Foundation — home"><img src="img/Qomics.png" alt="" width="41" height="34" /><span class="brand-wordmark">Quantum Omics Foundation</span></a>
+                </div>
+                <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="research.html">Research</a></li>
+              <li class="menu-active"><a href="learning.html">Learning</a></li>
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="get-involved.html">Get Involved</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+                </nav>
+            </div>
+        </div>
+    </header><section class="feature-area section-gap" id="learning-intro" style="padding-top: 150px; padding-bottom: 40px;">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-12 pb-40 header-text text-center">
+          <h1 class="pb-10">Learning</h1>
+          <p>A walkthrough of quantum computing in six tracks, written for people who arrive from biology, chemistry, or data science rather than from physics. Free, open, and honest about what the methods cannot yet do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<section class="about-video-area section-gap section-bg-gradient-subtle" id="walkthrough">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left column: content -->
+                <div class="col-lg-6 about-video-left">
+                    <h6 class="text-uppercase">Start Here</h6>
+                    <h2>
+                        A Route Through Quantum Computing,<br>
+                        For Life Scientists
+                    </h2>
+                    <p>
+                        Quantum computing is easy to get lost in: the introductions are either popular
+                        science that leaves you unable to do anything, or graduate physics that assumes
+                        five years of background. This walkthrough takes a third route. Each track says
+                        what the idea is, what it is genuinely good for, where it is oversold, and where
+                        to go to practise it.
+                    </p>
+
+                    <h4 class="pt-20">What You Need To Start</h4>
+                    <p>
+                        Linear algebra &mdash; vectors, matrices, eigenvalues &mdash; and enough Python to
+                        read a script. Not quantum mechanics: the parts of it that matter are introduced as
+                        they come up. A laptop is sufficient throughout. Nothing here requires access to a
+                        quantum computer; everything runs on a simulator, which is how most of the field
+                        works today.
+                    </p>
+
+                    <h4 class="pt-20">How The Tracks Fit Together</h4>
+                    <ul>
+                      <li><strong>Track 01 &mdash; Introduction to Quantum Computing.</strong> The foundation. Worth doing first; everything else assumes it.</li>
+                      <li><strong>Track 02 &mdash; Quantum Algorithms.</strong> What a quantum computer can actually be asked, and how to read an advantage claim.</li>
+                      <li><strong>Track 03 &mdash; Quantum Machine Learning.</strong> Variational circuits, quantum kernels, and the encoding problem.</li>
+                      <li><strong>Track 04 &mdash; Quantum Optimisation.</strong> QUBO formulations, QAOA and VQE, and honest benchmarking.</li>
+                      <li><strong>Track 05 &mdash; Quantum Simulation.</strong> Simulating quantum systems with quantum systems &mdash; the original application.</li>
+                      <li><strong>Track 06 &mdash; Quantum Methods and Omics Data.</strong> Where the tracks meet our research, and what is still open.</li>
+                    </ul>
+                    <p>
+                      After Track 01 the middle four are independent &mdash; read them in whatever order
+                      matches your problem. Track 06 is the capstone, and the one closest to
+                      <a href="research.html">our own research</a>.
+                    </p>
+                    <p><small>These are free educational materials. We are not a degree-granting body and this is not a certified course.</small></p>
+                    <a href="#tracks" class="primary-btn text-uppercase mb-4">Browse The Tracks</a>
+                </div>
+
+                <!-- Right column: the six tracks at a glance -->
+                <div class="col-lg-6 about-video-right">
+                    <div class="card p-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">The Path</h4>
+                            <ul class="list-unstyled text-left">
+                                <li class="mb-2"><strong>01 &middot; Introduction</strong><br>Qubits, gates, measurement, entanglement, noise.</li>
+                                <li class="mb-2"><strong>02 &middot; Algorithms</strong><br>Shor, Grover, phase estimation, cost accounting.</li>
+                                <li class="mb-2"><strong>03 &middot; Machine learning</strong><br>Variational circuits, quantum kernels, barren plateaus.</li>
+                                <li class="mb-2"><strong>04 &middot; Optimisation</strong><br>QUBO and Ising models, QAOA, VQE, benchmarking.</li>
+                                <li class="mb-2"><strong>05 &middot; Simulation</strong><br>Trotterisation, molecular ground states, resource estimates.</li>
+                                <li class="mb-2"><strong>06 &middot; Quantum and omics</strong><br>Encoding cell dynamics &mdash; open research.</li>
+                            </ul>
+                            <p class="card-text"><small>Estimated effort: three to six weeks per track at a few hours a week. The tracks are self-paced and there is nothing to enrol in.</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="home-about-area section-gap" id="tracks">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12 pb-40 header-text text-center">
+                    <h2 class="pb-10">The Six Tracks</h2>
+                    <p>
+                        Each track is self-contained: the concepts in order, what you should be able to do
+                        at the end, and where to practise.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex mb-4">
+                    <div class="single-product h-100 d-flex flex-column w-100">
+                        <div class="thumb"><img src="img/qvo.png" alt="Introduction to Quantum Computing" width="150" height="150"></div>
+                        <div class="details d-flex flex-column flex-grow-1">
+                            <h6 class="text-uppercase text-secondary mb-2">Track 01 &middot; Foundation</h6>
+                            <h4>Introduction to Quantum Computing</h4>
+                            <p class="flex-grow-1">What a qubit is, why interference rather than &ldquo;trying everything at once&rdquo; is the mechanism, and what measurement costs you. Gates as rotations, entanglement as a resource, and the noise limits that decide what present hardware can run.</p>
+                            <a href="#track-intro" class="text-uppercase primary-btn mt-auto">Read the track</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex mb-4">
+                    <div class="single-product h-100 d-flex flex-column w-100">
+                        <div class="thumb"><img src="img/qce.png" alt="Quantum Algorithms" width="150" height="150"></div>
+                        <div class="details d-flex flex-column flex-grow-1">
+                            <h6 class="text-uppercase text-secondary mb-2">Track 02 &middot; Algorithms</h6>
+                            <h4>Quantum Algorithms</h4>
+                            <p class="flex-grow-1">There is no general speed-up &mdash; only specific algorithms for specific structures. Shor, Grover, phase estimation and the Fourier transform, and the habit of asking what an advantage claim assumes about data loading and its classical baseline.</p>
+                            <a href="#track-algorithms" class="text-uppercase primary-btn mt-auto">Read the track</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex mb-4">
+                    <div class="single-product h-100 d-flex flex-column w-100">
+                        <div class="thumb"><img src="img/simulation.png" alt="Quantum Machine Learning" width="150" height="150"></div>
+                        <div class="details d-flex flex-column flex-grow-1">
+                            <h6 class="text-uppercase text-secondary mb-2">Track 03 &middot; Machine learning</h6>
+                            <h4>Quantum Machine Learning</h4>
+                            <p class="flex-grow-1">Variational circuits trained like networks, and the result that reframes the field: these models are kernel methods. Data encoding, the parameter-shift rule, and the two failure modes &mdash; barren plateaus and encoding cost &mdash; that decide whether any of it helps.</p>
+                            <a href="#track-qml" class="text-uppercase primary-btn mt-auto">Read the track</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex mb-4">
+                    <div class="single-product h-100 d-flex flex-column w-100">
+                        <div class="thumb"><img src="img/qvo.png" alt="Quantum Optimisation" width="150" height="150"></div>
+                        <div class="details d-flex flex-column flex-grow-1">
+                            <h6 class="text-uppercase text-secondary mb-2">Track 04 &middot; Optimisation</h6>
+                            <h4>Quantum Optimisation</h4>
+                            <p class="flex-grow-1">Writing a combinatorial problem as a QUBO, mapping it to an Ising Hamiltonian, and searching for the ground state with QAOA or VQE. Includes the part usually skipped: how to benchmark honestly against a classical solver that is genuinely competitive.</p>
+                            <a href="#track-optimisation" class="text-uppercase primary-btn mt-auto">Read the track</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex mb-4">
+                    <div class="single-product h-100 d-flex flex-column w-100">
+                        <div class="thumb"><img src="img/qce.png" alt="Quantum Simulation" width="150" height="150"></div>
+                        <div class="details d-flex flex-column flex-grow-1">
+                            <h6 class="text-uppercase text-secondary mb-2">Track 05 &middot; Simulation</h6>
+                            <h4>Quantum Simulation</h4>
+                            <p class="flex-grow-1">The application the field was invented for, and the most defensible one: simulating quantum systems with quantum systems. Trotterisation, fermion-to-qubit mappings, molecular ground states, and honest resource estimates for what hardware cannot yet reach.</p>
+                            <a href="#track-simulation" class="text-uppercase primary-btn mt-auto">Read the track</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 d-flex mb-4">
+                    <div class="single-product h-100 d-flex flex-column w-100">
+                        <div class="thumb"><img src="img/simulation.png" alt="Quantum Methods and Omics Data" width="150" height="150"></div>
+                        <div class="details d-flex flex-column flex-grow-1">
+                            <h6 class="text-uppercase text-secondary mb-2">Track 06 &middot; Capstone</h6>
+                            <h4>Quantum Methods and Omics Data</h4>
+                            <p class="flex-grow-1">Where the five tracks meet our own research, and the only one that is open rather than settled. Why high-dimensional omics data is the hard case for encoding, and why we encode a constrained model of cell dynamics instead of the raw measurements.</p>
+                            <a href="#track-omics" class="text-uppercase primary-btn mt-auto">Read the track</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="about-video-area section-gap section-bg-gradient-subtle" id="track-intro">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h6 class="text-uppercase">Track 01 &middot; Foundation</h6>
+                    <h2 class="pb-10">Introduction to Quantum Computing</h2>
+                    <p>A quantum computer is not a faster classical computer. It is a different machine, and the first thing to learn is what kind of question it can be asked.</p>
+                    <p>A classical bit is 0 or 1. A qubit is described by a pair of complex numbers, and the useful part is not that it is &ldquo;both at once&rdquo; &mdash; that phrase does more harm than good &mdash; but that those numbers can <em>interfere</em>. Arrange a computation so the paths leading to wrong answers cancel and the paths leading to right ones reinforce, and you read out the right answer with high probability. Every algorithm in the tracks below is an exercise in arranging that cancellation.</p>
+                    <p>Two facts do most of the work. Measurement destroys the state you measured, so you cannot inspect intermediate results the way you would a variable in a debugger. And information cannot be copied &mdash; the no-cloning theorem &mdash; so the classical habit of duplicating data to check it is unavailable. Almost everything that feels awkward about programming a quantum computer follows from these two.</p>
+                    <p>Entanglement is the third idea, and the one worth being careful about. Two qubits can share a joint state that is not describable as one state for each separately. This is real and measurable, and has been demonstrated in the laboratory for decades. It does not permit faster-than-light signalling; it is a correlation stronger than any classical one, and it is the resource the algorithms spend.</p>
+                    <p>Describing <em>n</em> qubits classically takes on the order of 2<sup>n</sup> numbers, which at fifty qubits is already beyond any machine we have. That is why quantum computing is interesting, and also why it is hard to verify: the regime where it would help is the regime where you cannot check the answer by direct simulation.</p>
+                    <h4 class="pt-20">The Concepts, In Order</h4>
+                    <ul>
+                      <li><strong>States and amplitudes.</strong> Qubits as vectors, the Bloch sphere as a picture of one qubit, and why global phase carries no information.</li>
+                      <li><strong>Gates as rotations.</strong> Single-qubit gates (X, Z, H, the parameterised rotations) and two-qubit gates (CNOT), and why they must be reversible.</li>
+                      <li><strong>Measurement.</strong> Probabilities from amplitudes, the effect of measuring, and why a circuit is run many times to build up statistics.</li>
+                      <li><strong>Entanglement.</strong> Bell states, correlations that beat any classical model, and what entanglement does not let you do.</li>
+                      <li><strong>Noise and the NISQ reality.</strong> Decoherence, gate error, and why circuit depth is the binding constraint on today's hardware.</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="card p-4 mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">What You Should Be Able To Do</h4>
+                            <p class="card-text">Read a circuit diagram and say what it does. Write a Bell state by hand and predict its measurement statistics. Explain why a quantum computer cannot simply be simulated away, and why results come back as distributions rather than single values.</p>
+                        </div>
+                    </div>
+                    <div class="card p-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">Where To Practise</h4>
+                            <ul class="list-unstyled text-left">
+                                <li class="mb-2"><strong>IBM Quantum Learning</strong> &mdash; free structured courses with runnable notebooks. <a href="https://learning.quantum.ibm.com/" target="_blank" rel="noopener">learning.quantum.ibm.com</a></li>
+                                <li class="mb-2"><strong>Qiskit</strong> &mdash; open-source Python SDK; build a circuit, run it on a simulator, inspect the counts. <a href="https://qiskit.org/" target="_blank" rel="noopener">qiskit.org</a></li>
+                                <li class="mb-2"><strong>PennyLane Learn</strong> &mdash; tutorials leaning towards differentiable circuits, useful before Track 03. <a href="https://pennylane.ai/learn" target="_blank" rel="noopener">pennylane.ai/learn</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="home-about-area section-gap" id="track-algorithms">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h6 class="text-uppercase">Track 02 &middot; Algorithms</h6>
+                    <h2 class="pb-10">Quantum Algorithms</h2>
+                    <p>There is no general quantum speed-up. There are specific algorithms for specific problem structures, and knowing which structure buys what is the whole skill.</p>
+                    <p>The canonical results are worth learning in the order they were discovered, because each reveals a different structure to exploit. Shor's factoring algorithm turns a number-theory problem into a question about the period of a function, and periods are what quantum Fourier transforms find efficiently. Grover's search gives a quadratic improvement for unstructured search &mdash; genuinely general, but quadratic, which matters far less in practice than the exponential headline results.</p>
+                    <p>Hold onto two distinctions: <em>exponential</em> against <em>polynomial</em> advantage, and <em>proven</em> against <em>conjectured</em>. Shor's advantage is exponential relative to the best known classical factoring algorithms, not proven against all possible ones. Grover's quadratic advantage is proven and optimal. Most of the heuristic methods in Tracks 03 and 04 have no proven advantage at all, and several published claims have later been matched by improved classical methods. That happens often enough to be your default expectation rather than a surprise.</p>
+                    <p>Phase estimation, amplitude amplification, and the quantum Fourier transform recur throughout the field; most later algorithms are these three assembled differently. Understanding them well is a better investment than surveying fifty algorithm names.</p>
+                    <p>The part usually skipped is input and output. Many algorithms with impressive asymptotics assume the data is already loaded into a quantum state, and that loading can cost as much as the speed-up saves. Any advantage claim that does not account for state preparation and readout deserves scepticism &mdash; and for data-heavy fields like ours, that is the central question rather than a footnote.</p>
+                    <h4 class="pt-20">The Concepts, In Order</h4>
+                    <ul>
+                      <li><strong>Interference as a method.</strong> Deutsch&ndash;Jozsa and Bernstein&ndash;Vazirani: small, clean examples of arranging cancellation deliberately.</li>
+                      <li><strong>The quantum Fourier transform.</strong> Period finding, and how it becomes factoring in Shor's algorithm.</li>
+                      <li><strong>Amplitude amplification.</strong> Grover search, its quadratic bound, and why that bound cannot be beaten.</li>
+                      <li><strong>Phase estimation.</strong> Extracting eigenvalues &mdash; the primitive underneath the chemistry and simulation applications in Track 05.</li>
+                      <li><strong>Cost accounting.</strong> Circuit depth, qubit count, state preparation, and error-correction overhead: where theoretical speed-ups meet hardware.</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="card p-4 mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">What You Should Be Able To Do</h4>
+                            <p class="card-text">Look at a computational problem and say whether it has the structure a known quantum algorithm exploits &mdash; and say honestly when it does not. Read an advantage claim and identify what it assumes about data loading, error rates, and the classical baseline it is measured against.</p>
+                        </div>
+                    </div>
+                    <div class="card p-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">Where To Practise</h4>
+                            <ul class="list-unstyled text-left">
+                                <li class="mb-2"><strong>Quantum Algorithm Implementations for Beginners</strong> &mdash; worked implementations of the standard algorithms. <a href="https://arxiv.org/abs/1804.03719" target="_blank" rel="noopener">arXiv:1804.03719</a></li>
+                                <li class="mb-2"><strong>Quantum Computing in the NISQ Era and Beyond</strong> &mdash; the best short account of what present hardware can and cannot do. <a href="https://arxiv.org/abs/1801.00862" target="_blank" rel="noopener">arXiv:1801.00862</a></li>
+                                <li class="mb-2"><strong>Cirq</strong> &mdash; Google's framework, with fine-grained control over gate scheduling and device constraints. <a href="https://quantumai.google/cirq" target="_blank" rel="noopener">quantumai.google/cirq</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="about-video-area section-gap section-bg-gradient-subtle" id="track-qml">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h6 class="text-uppercase">Track 03 &middot; Machine learning</h6>
+                    <h2 class="pb-10">Quantum Machine Learning</h2>
+                    <p>The most useful reframing in this area: most quantum machine learning models are kernel methods. Once you see that, the field becomes much easier to reason about.</p>
+                    <p>A variational quantum circuit is a circuit with tunable parameters. Encode your data into a quantum state, apply the parameterised circuit, measure something, compare it to a target, and adjust &mdash; the same training loop as a neural network, with a circuit in place of the network. Gradients are available analytically through the parameter-shift rule, which is what makes the loop practical.</p>
+                    <p>The result that organises the field is Schuld's observation that supervised models of this form are equivalent to kernel methods: the encoding defines a feature map, and training searches for a decision boundary in the resulting feature space. This is clarifying and also deflationary. The question stops being &ldquo;is a quantum model more powerful&rdquo; and becomes the sharper &ldquo;is this particular feature map useful for this particular data&rdquo; &mdash; which has a checkable answer, often no.</p>
+                    <p>Two obstacles deserve naming, because meeting them unprepared wastes months. <em>Barren plateaus</em>: for many circuit designs the gradient vanishes exponentially with qubit count, so training stalls and no amount of tuning rescues it. And <em>data encoding</em>: loading a high-dimensional classical dataset into a quantum state is expensive, and much of the claimed advantage in the literature is consumed by it. Omics data is high-dimensional almost by definition, which makes this our problem specifically.</p>
+                    <p>There is no demonstrated quantum advantage on a real-world machine learning task at the time of writing. That is not a reason to avoid the field &mdash; the theory is moving quickly and the structural questions are genuinely open &mdash; but it is the correct baseline against which to read any strong claim, including ours.</p>
+                    <h4 class="pt-20">The Concepts, In Order</h4>
+                    <ul>
+                      <li><strong>Data encoding.</strong> Basis, angle, and amplitude encoding, and the cost of each. The step that decides whether the rest is worth doing.</li>
+                      <li><strong>Variational circuits.</strong> Ansatz design, expressibility against trainability, and why more expressive is not better.</li>
+                      <li><strong>Training.</strong> The parameter-shift rule, hybrid quantum&ndash;classical loops, and shot noise in the gradient estimate.</li>
+                      <li><strong>Quantum kernels.</strong> The feature-map view, kernel-target alignment, and testing an encoding before committing to it.</li>
+                      <li><strong>Failure modes.</strong> Barren plateaus, overparameterisation, and classical baselines that quietly match the quantum result.</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="card p-4 mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">What You Should Be Able To Do</h4>
+                            <p class="card-text">Build and train a variational classifier on a small dataset, and diagnose it when it fails to train. Explain the kernel correspondence and use it to reason about whether an encoding suits your data. Recognise a barren plateau from the training curve rather than from the literature.</p>
+                        </div>
+                    </div>
+                    <div class="card p-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">Where To Practise</h4>
+                            <ul class="list-unstyled text-left">
+                                <li class="mb-2"><strong>PennyLane demonstrations</strong> &mdash; runnable notebooks on variational classifiers, quantum kernels, and barren plateaus. <a href="https://pennylane.ai/demonstrations/" target="_blank" rel="noopener">pennylane.ai/demonstrations</a></li>
+                                <li class="mb-2"><strong>Supervised QML models are kernel methods</strong> &mdash; Schuld, 2021; the paper that reorganised how the field is taught. <a href="https://arxiv.org/abs/2101.11020" target="_blank" rel="noopener">arXiv:2101.11020</a></li>
+                                <li class="mb-2"><strong>Variational Quantum Algorithms</strong> &mdash; Cerezo et al., 2020; the standard review, covering Track 04 as well. <a href="https://arxiv.org/abs/2012.09265" target="_blank" rel="noopener">arXiv:2012.09265</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="home-about-area section-gap" id="track-optimisation">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h6 class="text-uppercase">Track 04 &middot; Optimisation</h6>
+                    <h2 class="pb-10">Quantum Optimisation</h2>
+                    <p>A great many practical problems reduce to minimising a quadratic function of binary variables. That single observation is the entry point to quantum optimisation.</p>
+                    <p>The recipe is uniform. Write the problem as a QUBO &mdash; quadratic unconstrained binary optimisation &mdash; map each binary variable to a qubit, and the cost function becomes an Ising Hamiltonian whose lowest-energy state encodes the answer. Finding a ground state is something quantum hardware is naturally suited to attempt. Scheduling, portfolio selection, graph partitioning, and a good deal of network and pathway analysis all fit this mould.</p>
+                    <p>Two approaches dominate. <strong>QAOA</strong>, the quantum approximate optimisation algorithm, alternates between the cost Hamiltonian and a mixing Hamiltonian for <em>p</em> rounds, with classical optimisation of the angles; more rounds give a better approximation and a deeper, noisier circuit. <strong>VQE</strong>, the variational quantum eigensolver, uses a parameterised ansatz to search for the ground state directly, and carries over unchanged into Track 05.</p>
+                    <p>The realistic assessment is that classical solvers are strong here. Decades of work on branch-and-bound, simulated annealing, and specialised heuristics set a high bar, and QAOA has not cleared it on problems of practical size. Where the field is genuinely open is on problem classes whose structure classical methods handle awkwardly, and on constrained problems where the constraint can be encoded in the mixer rather than as a penalty. Learn the constraint handling carefully: a penalty that is too weak yields infeasible answers, and one that is too strong flattens the landscape into noise.</p>
+                    <h4 class="pt-20">The Concepts, In Order</h4>
+                    <ul>
+                      <li><strong>Problems as Hamiltonians.</strong> QUBO and Ising formulations, and the penalty terms that encode constraints.</li>
+                      <li><strong>QAOA.</strong> Cost and mixer layers, the depth parameter <em>p</em>, and the classical outer loop that tunes the angles.</li>
+                      <li><strong>VQE.</strong> Ansatz choice, measuring an expectation value, and the variational principle that bounds the result.</li>
+                      <li><strong>Annealing.</strong> Adiabatic quantum computation, its relation to QAOA, and what analogue annealers do differently.</li>
+                      <li><strong>Benchmarking properly.</strong> Approximation ratios, time-to-solution, and choosing a classical baseline that is actually competitive.</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="card p-4 mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">What You Should Be Able To Do</h4>
+                            <p class="card-text">Take a combinatorial problem stated in words, write it as a QUBO, and map it to a Hamiltonian. Run QAOA on it, tune <em>p</em>, and compare against a decent classical solver &mdash; including reporting honestly when the classical solver wins.</p>
+                        </div>
+                    </div>
+                    <div class="card p-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">Where To Practise</h4>
+                            <ul class="list-unstyled text-left">
+                                <li class="mb-2"><strong>A Quantum Approximate Optimization Algorithm</strong> &mdash; Farhi, Goldstone &amp; Gutmann, 2014; the original, short and readable. <a href="https://arxiv.org/abs/1411.4028" target="_blank" rel="noopener">arXiv:1411.4028</a></li>
+                                <li class="mb-2"><strong>IBM Quantum Learning</strong> &mdash; variational algorithm courses with QAOA and VQE worked through end to end. <a href="https://learning.quantum.ibm.com/" target="_blank" rel="noopener">learning.quantum.ibm.com</a></li>
+                                <li class="mb-2"><strong>Variational Quantum Algorithms</strong> &mdash; the shared machinery behind QAOA, VQE, and the QML of Track 03. <a href="https://arxiv.org/abs/2012.09265" target="_blank" rel="noopener">arXiv:2012.09265</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="about-video-area section-gap section-bg-gradient-subtle" id="track-simulation">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h6 class="text-uppercase">Track 05 &middot; Simulation</h6>
+                    <h2 class="pb-10">Quantum Simulation</h2>
+                    <p>This is the application Feynman had in mind, and it remains the most defensible one: use a quantum system to simulate a quantum system.</p>
+                    <p>The argument is structural rather than heuristic. Simulating quantum mechanics on a classical computer is hard because the state space grows exponentially. A quantum computer's state space grows the same way, so the mismatch disappears. There is no need to hope for a speed-up on a problem with nothing quantum about it &mdash; here the fit between machine and problem is the point.</p>
+                    <p>Molecular electronic structure is the standard target: the ground-state energy of a molecule determines its geometry, its reaction barriers, and much of its chemistry, and it is exactly the eigenvalue problem that phase estimation and VQE address. For drug discovery and materials this matters directly, and it is where the case for eventual quantum utility is strongest.</p>
+                    <p>Keep two things separate. <em>Digital</em> simulation decomposes time evolution into gates &mdash; Trotterisation and its successors &mdash; and is general but expensive in circuit depth. <em>Analogue</em> simulation engineers a physical system to mimic the one you care about, which is cheaper but purpose-built. And keep the caveat in view: useful molecules on real hardware remain out of reach because of error rates. Fault-tolerant quantum computing is the prerequisite for the headline chemistry applications, and it does not exist yet.</p>
+                    <h4 class="pt-20">The Concepts, In Order</h4>
+                    <ul>
+                      <li><strong>Hamiltonian simulation.</strong> Time evolution as a circuit, Trotter&ndash;Suzuki decomposition, and the error it introduces.</li>
+                      <li><strong>Fermion-to-qubit mappings.</strong> Jordan&ndash;Wigner and Bravyi&ndash;Kitaev: how electrons become qubits, and why the choice affects circuit cost.</li>
+                      <li><strong>Ground-state methods.</strong> VQE and phase estimation applied to molecular energies, with chemically motivated ansatz design.</li>
+                      <li><strong>Open systems.</strong> Dissipation, decoherence, and simulating a system that exchanges energy with its surroundings.</li>
+                      <li><strong>Resource estimation.</strong> Counting qubits and gates for a target accuracy &mdash; the calculation that separates a demonstration from an application.</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="card p-4 mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">What You Should Be Able To Do</h4>
+                            <p class="card-text">Map a small molecular Hamiltonian onto qubits, run VQE on it, and compare against an exact classical diagonalisation. Estimate the circuit depth a larger instance would need, and say clearly why that depth is not yet reachable.</p>
+                        </div>
+                    </div>
+                    <div class="card p-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">Where To Practise</h4>
+                            <ul class="list-unstyled text-left">
+                                <li class="mb-2"><strong>QuTiP</strong> &mdash; Python toolbox for open quantum systems; the reference implementation for dissipative dynamics. <a href="https://qutip.org/" target="_blank" rel="noopener">qutip.org</a></li>
+                                <li class="mb-2"><strong>Quantum computers as universal quantum simulators</strong> &mdash; Tacchino et al., 2019; digital and analogue approaches and their limits. <a href="https://arxiv.org/abs/1907.03505" target="_blank" rel="noopener">arXiv:1907.03505</a></li>
+                                <li class="mb-2"><strong>Cirq experiments</strong> &mdash; worked simulation experiments including variational chemistry. <a href="https://quantumai.google/cirq/experiments" target="_blank" rel="noopener">quantumai.google/cirq/experiments</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="home-about-area section-gap" id="track-omics">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h6 class="text-uppercase">Track 06 &middot; Capstone</h6>
+                    <h2 class="pb-10">Quantum Methods and Omics Data</h2>
+                    <p>This track is different in kind from the five above it. Those cover settled material. This one is a set of open questions, and it is what we work on.</p>
+                    <p>Omics data has an awkward shape for quantum methods: tens of thousands of measured features, few samples, substantial noise, and strong correlations. Track 03's encoding problem bites hardest exactly here &mdash; loading twenty thousand transcript measurements into a quantum state naively costs more than any downstream advantage could repay. Confronting that honestly is the beginning of the work rather than an obstacle to route around.</p>
+                    <p>The direction we find most promising is not to encode the raw data at all, but to encode a <em>model</em> of the cell's dynamics. A cell's state changes over time under constraints &mdash; matter is conserved, energy has to come from somewhere &mdash; and a dynamical model with those constraints built in has far fewer degrees of freedom than the raw measurement vector. That is a target of a size a quantum computer could plausibly carry. This is the reasoning behind the quantum side of our <a href="research.html#qvo">Quantum Virtual Omics</a> programme, built as a matched pair with a classical version so the comparison is fair rather than asserted.</p>
+                    <h4 class="pt-20">The Concepts, In Order</h4>
+                    <ul>
+                      <li><strong>The encoding question.</strong> High-dimensional, low-sample-count data against a state-preparation cost that scales badly. The problem that has to be solved before anything else counts.</li>
+                      <li><strong>Dynamics over snapshots.</strong> Encoding a constrained model of how a cell moves, rather than a static measurement vector &mdash; a smaller object with more structure to exploit.</li>
+                      <li><strong>Honest comparison.</strong> Building classical and quantum versions as a matched pair, so where each wins is measured rather than claimed.</li>
+                      <li><strong>Open, checkable work.</strong> Public datasets, released code, and published negative results. If a quantum approach does not help, that is worth reporting too.</li>
+                    </ul>
+                    <h4 class="pt-20">Open Questions Worth A Thesis</h4>
+                    <p>
+                      Which biological structures &mdash; pathway topology, conservation laws, the
+                      near-periodicity of circadian data &mdash; map onto quantum representations
+                      efficiently enough to matter? Can pathway-level optimisation problems be posed
+                      so that Track 04's constrained methods have something to exploit? Where does a
+                      quantum representation of cell dynamics earn its keep against a well-tuned
+                      classical one, and where does it not? We do not know the answers. Nobody does
+                      yet, and that is the reason to work on them.
+                    </p>
+                    <a href="get-involved.html" class="primary-btn text-uppercase mb-4">Work On This With Us</a>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="card p-4 mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">What You Should Be Able To Do</h4>
+                            <p class="card-text">Read the literature critically rather than follow a syllabus. There is no textbook for this, the literature is thin and moving, and several published results have already been superseded. If you finish Tracks 01&ndash;05 and want a problem to work on, this is where we would point you.</p>
+                        </div>
+                    </div>
+                    <div class="card p-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">Where To Practise</h4>
+                            <ul class="list-unstyled text-left">
+                                <li class="mb-2"><strong>Our research programmes</strong> &mdash; what we are building and where each part stands. <a href="research.html">research</a></li>
+                                <li class="mb-2"><strong>Resources</strong> &mdash; preprints, datasets, and code we have released. <a href="resources.html">resources</a></li>
+                                <li class="mb-2"><strong>Get involved</strong> &mdash; collaborate, or tell us where the reasoning above is wrong. <a href="get-involved.html">get involved</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="about-video-area section-gap section-bg-gradient-subtle" id="reading">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12 pb-40 header-text text-center">
+                    <h2 class="pb-10">Primary Sources</h2>
+                    <p>
+                        Every item is open access. Where a track cites a result, this is the paper it
+                        comes from &mdash; read the source rather than a summary of it, including this one.
+                    </p>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-10">
+                    <ul class="list-unstyled text-left">
+                        <li class="mb-2">Shor, P. W. (1995). <em>Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer.</em> <a href="https://arxiv.org/abs/quant-ph/9508027" target="_blank" rel="noopener">arXiv:quant-ph/9508027</a></li>
+                        <li class="mb-2">Grover, L. K. (1996). <em>A fast quantum mechanical algorithm for database search.</em> <a href="https://arxiv.org/abs/quant-ph/9605043" target="_blank" rel="noopener">arXiv:quant-ph/9605043</a></li>
+                        <li class="mb-2">Preskill, J. (2018). <em>Quantum Computing in the NISQ era and beyond.</em> <a href="https://arxiv.org/abs/1801.00862" target="_blank" rel="noopener">arXiv:1801.00862</a></li>
+                        <li class="mb-2">Farhi, E., Goldstone, J. &amp; Gutmann, S. (2014). <em>A Quantum Approximate Optimization Algorithm.</em> <a href="https://arxiv.org/abs/1411.4028" target="_blank" rel="noopener">arXiv:1411.4028</a></li>
+                        <li class="mb-2">Cerezo, M. et al. (2020). <em>Variational Quantum Algorithms.</em> <a href="https://arxiv.org/abs/2012.09265" target="_blank" rel="noopener">arXiv:2012.09265</a></li>
+                        <li class="mb-2">Schuld, M. (2021). <em>Supervised quantum machine learning models are kernel methods.</em> <a href="https://arxiv.org/abs/2101.11020" target="_blank" rel="noopener">arXiv:2101.11020</a></li>
+                        <li class="mb-2">Farhi, E. &amp; Neven, H. (2018). <em>Classification with Quantum Neural Networks on Near Term Processors.</em> <a href="https://arxiv.org/abs/1802.06002" target="_blank" rel="noopener">arXiv:1802.06002</a></li>
+                        <li class="mb-2">Lloyd, S. et al. (2020). <em>Quantum embeddings for machine learning.</em> <a href="https://arxiv.org/abs/2001.03622" target="_blank" rel="noopener">arXiv:2001.03622</a></li>
+                        <li class="mb-2">Crooks, G. E. (2019). <em>Gradients of parameterized quantum gates using the parameter-shift rule and gate decomposition.</em> <a href="https://arxiv.org/abs/1905.13311" target="_blank" rel="noopener">arXiv:1905.13311</a></li>
+                        <li class="mb-2">Bergholm, V. et al. (2018). <em>PennyLane: Automatic differentiation of hybrid quantum-classical computations.</em> <a href="https://arxiv.org/abs/1811.04968" target="_blank" rel="noopener">arXiv:1811.04968</a></li>
+                        <li class="mb-2">Tacchino, F. et al. (2019). <em>Quantum computers as universal quantum simulators: state-of-art and perspectives.</em> <a href="https://arxiv.org/abs/1907.03505" target="_blank" rel="noopener">arXiv:1907.03505</a></li>
+                        <li class="mb-2">Robert, A. et al. (2019). <em>Resource-Efficient Quantum Algorithm for Protein Folding.</em> <a href="https://arxiv.org/abs/1908.02163" target="_blank" rel="noopener">arXiv:1908.02163</a></li>
+                        <li class="mb-2">Abhijith, J. et al. (2018). <em>Quantum Algorithm Implementations for Beginners.</em> <a href="https://arxiv.org/abs/1804.03719" target="_blank" rel="noopener">arXiv:1804.03719</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="home-about-area section-gap" id="scope">
+        <div class="container">
+            <div class="row pt-20 d-flex justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card p-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">About This Walkthrough</h4>
+                            <p class="card-text">
+                                These are free educational materials, offered as a route through a field
+                                that is easy to get lost in. We are not a degree-granting body and this is
+                                not a certified course. The external courses and software linked here belong
+                                to their respective projects and are listed because we find them useful, not
+                                through any affiliation. Where a track states the current limits of a method,
+                                that reflects our reading of the literature at the time of writing; the field
+                                moves, and corrections are welcome &mdash;
+                                <a href="contact.html">tell us</a> if something here has been superseded.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<footer class="footer-area section-gap" id="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-md-12">
+                    <div class="single-footer-widget">
+                        <h6>Quick Links</h6>
+                        <ul class="footer-nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="research.html">Research</a></li>
+                            <li><a href="learning.html">Learning</a></li>
+                            <li><a href="resources.html">Resources</a></li>
+                            <li><a href="get-involved.html">Get Involved</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Newsletter Subscription -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="single-footer-widget newsletter">
+                        <h6>Join Our Newsletter</h6>
+                        <p>
+                            Stay updated with our latest research, events, and progress in computational cell modelling. Your
+                            email will be stored securely in our subscriber list—no spam.
+                        </p>
+                        <form id="subscribe-form">
+                            <div class="form-group row" style="width: 100%">
+                                <div class="col-lg-8 col-md-12">
+                                    <input name="email" id="email-input" placeholder="Enter Email" required
+                                        type="email">
+                                </div>
+                                <div class="col-lg-4 col-md-12">
+                                    <button type="submit" class="nw-btn primary-btn">Subscribe</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="subscribe-message" style="margin-top: 10px; color: white;"></div>
+
+                        <!-- Inline JavaScript to handle form submission -->
+                        <script>
+                            document.getElementById("subscribe-form").addEventListener("submit", function (e) {
+                                e.preventDefault();
+                                const email = document.getElementById("email-input").value;
+                                // Replace the URL below with your deployed Apps Script Web App URL
+                                const scriptURL = "https://script.google.com/macros/s/AKfycbwRnYxwSTX2Kjle9xmAQw8w_e0MNiYHIQr885H0C7Ba8GEr_QNoiLnE6tJjxFB55jPL/exec";
+                                const formData = new FormData();
+                                formData.append("email", email);
+
+                                fetch(scriptURL, { method: "POST", body: formData })
+                                    .then(response => response.text())
+                                    .then(data => {
+                                        document.getElementById("subscribe-message").innerText = "Subscription successful!";
+                                        document.getElementById("email-input").value = "";
+                                    })
+                                    .catch(error => {
+                                        document.getElementById("subscribe-message").innerText = "Error. Try again.";
+                                        console.error("Error!", error.message);
+                                    });
+                            });
+                        </script>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="col-lg-3 col-md-12">
+                    <div class="single-footer-widget mail-chimp">
+                        <h6 class="mb-20">Connect With Us</h6>
+                        <div class="footer-social d-flex align-items-center">
+                            <a href="https://www.linkedin.com/company/quantum-omics-foundation" target="_blank" rel="noopener"><i
+                                    class="fa fa-linkedin"></i></a>
+<a href="https://www.facebook.com/QuantumOmics" target="_blank" rel="noopener">
+<i
+                                    class="fa fa-facebook">
+</i>
+</a>
+                            <a href="https://github.com/quantum-omics" target="_blank" rel="noopener"><i
+                                    class="fa fa-github"></i></a>
+                            <a href="https://www.youtube.com/@QuantumOmicsFoundation" target="_blank" rel="noopener"><i
+                                    class="fa fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="row footer-bottom d-flex justify-content-between">
+                <p class="col-lg-8 col-sm-12 footer-text m-0 text-white">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved |
+                    This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                    <a href="https://colorlib.com" target="_blank" rel="noopener">Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- End footer Area -->
+
+
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="js/easing.min.js"></script>
+    <script src="js/hoverIntent.js"></script>
+    <script src="js/superfish.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/hexagons.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/mail-script.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
